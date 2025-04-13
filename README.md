@@ -1,15 +1,58 @@
-# "Node.js Tutorial - How to Build a Web Server"
+# Node.js Server Project
 
-✅ [Check out my YouTube Channel with all of my tutorials](https://www.youtube.com/DaveGrayTeachesCode).
+This repository contains a simple **Node.js server** that serves static files and handles various content types. It includes features like custom event logging and graceful handling of non-existing pages.
 
-**Description:**
+## Features
+- Serves files (HTML, CSS, JavaScript, JSON, images, etc.)
+- Custom **event logging** using the `events` module
+- Graceful handling of 404 errors (serves a custom 404 page)
+- Redirects for specific pages (e.g., `/old-page.html` to `/new-page.html`)
+- Modularized code for better maintainability
 
-This repository shares the code applied during the Youtube tutorial. The tutorial is part of a [Node.js for Beginners Playlist](https://www.youtube.com/playlist?list=PL0Zuz27SZ-6PFkIxaJ6Xx_X46avTM1aYw) on my channel.  
 
-[YouTube Tutorial](https://youtu.be/3ZAKY-CDKog) for this repository.
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/suniltechs/Node_Server_Project.git
+   cd Node_Server_Project
+   ```
 
-I suggest completing my [8 hour JavaScript course tutorial video](https://youtu.be/EfAl9bwzVZk) if you are new to Javascript.
+2.Install the required dependencies:
+  ```
+  npm install
+  ```
 
-### Academic Honesty
+## Usage
+1. Start the server:
+   ```
+   node server.js
+   ```
+2. Open your browser and navigate to:
+   ```
+   http://localhost:3500
+   ```
+3. The server dynamically serves files based on the URL and handles content types appropriately.
 
-**DO NOT COPY FOR AN ASSIGNMENT** - Avoid plagiargism and adhere to the spirit of this [Academic Honesty Policy](https://www.freecodecamp.org/news/academic-honesty-policy/).
+## Environment Variables
+- PORT: The server will run on the port specified in the PORT environment variable, or default to 3500.
+
+## Event Logging
+### This server uses a custom event logging system:
+
+- Logs all incoming requests with the URL and method.
+- Logs errors into errLog.txt with detailed error messages.
+
+## Error Handling
+- Returns a custom 404 page for non-existing routes.
+- Redirects:
+  - /old-page.html → /new-page.html
+  - /www-page.html → /
+
+## Dependencies
+- Node.js
+- fs (File System Module)
+- events (Event Emitter)
+
+## Contributing
+- Feel free to submit issues or pull requests to contribute to the project!
+   
