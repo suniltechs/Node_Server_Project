@@ -14,7 +14,7 @@ This repository contains a simple **Node.js server** that serves static files an
 1. Clone the repository:
    ```bash
    git clone https://github.com/suniltechs/Node_Server_Project.git
-   cd Node_Server_Project
+   cd node_server_project
    ```
 
 2.Install the required dependencies:
